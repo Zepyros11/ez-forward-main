@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Entry</title>
+</head>
+
+<body>
+    <h1>Current Entry</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <div>
+            <p>Current Image:</p>
+            <img src="{{url_for('static',filename='uploads/'+entry.image_url) }}" width="200" alt="">
+        </div>
+        <div>
+            <label>New Image (optional):</label>
+            <input type="file" name="image" accept="image/*">
+        </div>
+        <div>
+            <label>Description:</label>
+            <textarea name="description" required>{{ entry.description }}</textarea>
+        </div>
+        <button type="submit">Update Entry</button>
+    </form>
+</body>
+
+</html>

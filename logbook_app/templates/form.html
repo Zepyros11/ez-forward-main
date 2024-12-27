@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Entry</title>
+  </head>
+  <body>
+    <form method="POST" enctype="multipart/form-data">
+      <div>
+        <label>Image:</label>
+        <input type="file" name="image" accept="image/*" required />
+      </div>
+      <div>
+        <label>Description:</label>
+        <textarea name="description" required></textarea>
+      </div>
+      <button type="submit">Create Entry</button>
+    </form>
+  </body>
+</html>
